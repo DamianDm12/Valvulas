@@ -379,7 +379,7 @@ body {
 /* --- Nueva sección de Contacto --- */
 .contact-section-new {
     background: #ffffff;
-    padding: 60px 20px;
+    padding: 20px;
     text-align: center;
     width: 100%;
 }
@@ -396,7 +396,7 @@ body {
 .contact-content-wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 40px;
     max-width: 1000px;
@@ -407,11 +407,18 @@ body {
     text-align: left;
     flex: 1 1 400px;
     max-width: 450px;
+    /* Centra el contenido en el bloque de información */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .contact-text-with-icon {
     font-size: 1.2rem;
     margin-bottom: 15px;
     color: #333;
+    line-height: 1.5;
 }
 .contact-icon {
     color: #4b0082;
@@ -433,17 +440,26 @@ body {
     background: #005aa3;
     transform: translateY(-2px);
 }
-.contact-image-container {
+.contact-map-container {
     flex: 1 1 400px;
     max-width: 450px;
     text-align: center;
-}
-.contact-image {
-    max-width: 100%;
-    height: auto;
+    position: relative;
+    padding-bottom: 33.75%;
+    height: 0;
+    overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
+.contact-map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
+
 /* --- Footer --- */
 .footer {
     text-align: center;
@@ -470,7 +486,7 @@ body {
 }
 /* Estilos para la sección de "Válvulas" */
 .valves-section {
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 50px;
     width: 100%;
 }
@@ -492,38 +508,38 @@ body {
 .valves-content {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinea los ítems en la parte superior */
+    align-items: flex-start;
     gap: 30px;
-    flex-direction: row; /* Coloca los ítems uno al lado del otro */
+    flex-direction: row;
 }
 
 .valves-list-unstyled {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 48%; /* Ocupa casi la mitad del espacio */
+    width: 48%;
 }
 
 .valves-list-item {
-    background-color: #e6f2ff; /* Color de fondo de la burbuja */
-    border: 2px solid #0074d9; /* Borde azul */
-    border-radius: 30px; /* Esquinas redondeadas */
-    padding: 20px 30px; /* Espacio interno */
-    margin-bottom: 20px; /* Separación entre burbujas */
-    display: block; /* Para que cada burbuja sea un bloque */
-    text-align: center; /* Centrar el texto */
+    background-color: #e6f2ff;
+    border: 2px solid #0074d9;
+    border-radius: 30px;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
     font-size: 1.25rem;
-    color: #004080; /* Color de texto general dentro de la burbuja */
+    color: #004080;
     font-weight: 500;
 }
 
 .valves-list-item strong {
-    color: #000000; /* Color negro fuerte */
+    color: #000000;
     font-weight: 700;
 }
 
 .valves-list-icon {
-    display: none; /* Ocultamos el ícono ya que no es necesario con el estilo de burbuja */
+    display: none;
 }
 
 .valves-image-container {
@@ -622,23 +638,21 @@ body {
     .valves-content {
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Reducido el espacio entre la imagen y la lista */
+        gap: 10px;
     }
-
     .valves-list-unstyled {
-        max-width: 95%; /* Ajuste para móviles */
+        max-width: 95%;
         text-align: center;
     }
     .valves-list-item {
-        font-size: 1.1rem; /* Ajuste de tamaño de fuente para móviles */
-        padding: 15px 20px; /* Padding ajustado para móviles */
+        font-size: 1.1rem;
+        padding: 15px 20px;
     }
     .valves-image-container {
-        margin-bottom: 0; /* Elimina el espacio debajo de la imagen */
+        margin-bottom: 0;
     }
-
     .valves-footer-text {
-        margin-top: 0; /* Asegura que el texto esté pegado a la imagen */
+        margin-top: 0;
     }
 
     /* Tarjetas de servicios */
@@ -667,10 +681,10 @@ body {
         flex-direction: column;
     }
     .galeria-imagen {
-        width: 90%; /* Ancho para móviles, deja un pequeño margen */
-        max-width: 400px; /* Para que no sean exageradamente grandes en tabletas */
-        height: auto; /* La altura se ajusta automáticamente manteniendo la proporción */
-        aspect-ratio: 4 / 3; /* Mantiene la misma relación de aspecto en móviles */
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 4 / 3;
     }
 
     /* Contenido de contacto */
@@ -678,26 +692,39 @@ body {
         flex-direction: column;
         gap: 20px;
     }
-    .contact-info-block, .contact-image-container {
+    .contact-info-block, .contact-map-container {
         max-width: 100%;
+    }
+    .contact-info-block {
+        text-align: center;
+        align-items: center;
+        order: 1;
+        margin-bottom: 0;
+    }
+    .contact-map-container {
+        order: 2;
+        margin-top: 20px; /* Reducido para móviles */
+        position: relative;
+        height: 0;
+        padding-bottom: 75%;
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .contact-map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .contact-button-new {
+        margin-top: 10px;
     }
     .contact-section-new {
         padding: 40px 10px;
     }
     
-    /* Nueva sección de Válvulas */
-    .valves-list-unstyled {
-        margin-bottom: 20px; /* Asegura un pequeño espacio antes de la imagen */
-    }
-
-    .valves-image-container {
-        margin-bottom: 0;
-    }
-
-    .valves-footer-text {
-        margin-top: 0;
-    }
-
     /* Secciones generales */
     .section-title {
         font-size: 1.8rem;
