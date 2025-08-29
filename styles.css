@@ -1,0 +1,804 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    height: auto;
+}
+.navbar-logo {
+    height: 90px;
+    margin-right: 15px;
+}
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+    margin-left: 80px;
+}
+.navbar-links li a {
+    text-decoration: none;
+    color: #010305;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s, text-decoration 0.2s;
+    padding: 8px 18px;
+    border-radius: 8px;
+    display: inline-block;
+}
+.navbar-links li a:hover {
+    color: #fff;
+    background: #0074d9;
+    box-shadow: 0 2px 8px rgba(0,64,128,0.13);
+}
+
+/* Hero */
+.hero {
+    background:
+        linear-gradient(rgba(11, 12, 12, 0.059), rgba(0, 0, 0, 0.55)),
+        url('Factores-clave-en-la-seleccion-de-valvulas-industriales.webp') center center/cover no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 0px 20px 90px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    color: #153a6b;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: rgba(255,255,255,0.55);
+    padding: 0.3em 0.7em;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.hero p {
+    font-size: 1.3rem;
+    color: #ffffff;
+    display: inline-block;
+    background: rgba(255,255,255,0.38);
+    padding: 0.2em 0.7em;
+    border-radius: 8px;
+    margin-top: 18px;
+}
+
+/* Secciones generales */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+}
+.intro-text {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    font-size: 1.08rem;
+}
+
+/* Tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 30px 22px;
+    flex: 1 1 auto;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,64,128,0.13);
+}
+.card-icon {
+    font-size: 2.5rem;
+    color: #0074d9;
+    margin-bottom: 15px;
+}
+/* Testimonios */
+.testimonials-section {
+    background: #e6f2ff;
+    padding: 50px 0 60px 0;
+    width: 100%;
+}
+.carousel-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    padding: 0;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+    width: 100%;
+}
+.testimonial-card {
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    margin: 0;
+    text-align: center;
+}
+.testimonial-quote {
+    font-size: 1.2rem;
+    color: #004080;
+    margin-bottom: 12px;
+}
+.testimonial-author {
+    font-size: 1rem;
+    color: #333;
+    font-style: italic;
+}
+.carousel-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+.carousel-nav button {
+    background: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.carousel-nav button:hover {
+    background: #004080;
+}
+
+/* Galería */
+#galeria img {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#galeria img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,64,128,0.13);
+}
+
+/* Estilos para el botón de hamburguesa y la barra de navegación móvil */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #004080;
+    padding: 10px;
+    z-index: 101;
+}
+
+/* Estilos para la sección de "Por qué elegirnos" */
+.porque-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+.porque-container .image-container {
+    flex: 1 1 400px;
+    max-width: 50%;
+    text-align: center;
+}
+.porque-container .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.porque-container .text-content {
+    flex: 1 1 400px;
+}
+.porque-container .text-content p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Estilos para la nueva sección de servicios especializados */
+.specialized-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    padding: 0 10px;
+    width: 100%;
+}
+.specialized-card {
+    background-color: #f0f8ff;
+    border: 2px solid #b3e0ff;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.specialized-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.specialized-icon-container {
+    background-color: #e6f2ff;
+    border: 1px solid #cceeff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+.specialized-icon-container i {
+    color: #0074d9;
+    font-size: 2.2rem;
+}
+.specialized-card h3 {
+    color: #004080;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+.specialized-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* --- Estilos para la nueva sección de "Nuestro Proceso" --- */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+.process-step {
+    background-color: #f8f0f8;
+    border: 1px solid #e0cff0;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.process-icon-container {
+    background-color: #f5f0f5;
+    border: 2px solid #a872a8;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.process-icon-container i {
+    color: #8a2be2;
+    font-size: 1.8rem;
+}
+.process-step h3 {
+    color: #4b0082;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.process-step p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- Estilos para la nueva sección de la galería --- */
+.galeria-section {
+    background: #e6f2ff;
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+}
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+    align-items: flex-start;
+}
+.galeria-imagen {
+    width: 350px;
+    height: 262px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    display: block;
+}
+.galeria-imagen:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Nueva sección de Contacto --- */
+.contact-section-new {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+.contact-section-new .section-title {
+    color: #3b0e3b;
+    font-size: 2.2rem;
+}
+.contact-subtitle {
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    color: #555;
+}
+.contact-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+.contact-info-block {
+    text-align: left;
+    flex: 1 1 400px;
+    max-width: 450px;
+}
+.contact-text-with-icon {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+.contact-icon {
+    color: #4b0082;
+    margin-right: 12px;
+}
+.contact-button-new {
+    background: #0074d9;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+.contact-button-new:hover {
+    background: #005aa3;
+    transform: translateY(-2px);
+}
+.contact-image-container {
+    flex: 1 1 400px;
+    max-width: 450px;
+    text-align: center;
+}
+.contact-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #004080;
+    color: #fff;
+    width: 100%;
+}
+.footer-social-media {
+    margin-bottom: 15px;
+}
+.footer-social-media a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+.footer-social-media a:hover {
+    color: #0074d9;
+}
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+/* Estilos para la sección de "Válvulas" */
+.valves-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+.valves-title {
+    color: #004080;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.valves-intro {
+    font-size: 1.05rem;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.valves-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los ítems en la parte superior */
+    gap: 30px;
+    flex-direction: row; /* Coloca los ítems uno al lado del otro */
+}
+
+.valves-list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 48%; /* Ocupa casi la mitad del espacio */
+}
+
+.valves-list-item {
+    background-color: #e6f2ff; /* Color de fondo de la burbuja */
+    border: 2px solid #0074d9; /* Borde azul */
+    border-radius: 30px; /* Esquinas redondeadas */
+    padding: 20px 30px; /* Espacio interno */
+    margin-bottom: 20px; /* Separación entre burbujas */
+    display: block; /* Para que cada burbuja sea un bloque */
+    text-align: center; /* Centrar el texto */
+    font-size: 1.25rem;
+    color: #004080; /* Color de texto general dentro de la burbuja */
+    font-weight: 500;
+}
+
+.valves-list-item strong {
+    color: #000000; /* Color negro fuerte */
+    font-weight: 700;
+}
+
+.valves-list-icon {
+    display: none; /* Ocultamos el ícono ya que no es necesario con el estilo de burbuja */
+}
+
+.valves-image-container {
+    flex: 1 1 400px;
+    max-width: 450px;
+    text-align: center;
+}
+
+.valves-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.valves-footer-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-top: 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 15px 16px;
+        height: auto;
+    }
+    .navbar-logo {
+        height: 60px;
+        margin-right: 0;
+    }
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        z-index: 99;
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+    .container, .sectores-section, .contact-section-new, .galeria-section, .cards-container, .valve-flex-container, .specialized-services-grid, .process-grid {
+        padding-left: 5vw !important;
+        padding-right: 5vw !important;
+        width: 100%;
+        box-sizing: border-box;
+        max-width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .valve-flex-container {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        width: 100%;
+    }
+    .valve-img {
+        max-width: 95vw;
+        min-height: unset;
+    }
+    .valve-list {
+        min-width: unset;
+        width: 100%;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .sectores-section .intro-text {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .sectores-section .card {
+        max-width: 100%;
+    }
+
+    /* Ajustes específicos para la sección de válvulas en móviles */
+    .valves-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reducido el espacio entre la imagen y la lista */
+    }
+
+    .valves-list-unstyled {
+        max-width: 95%; /* Ajuste para móviles */
+        text-align: center;
+    }
+    .valves-list-item {
+        font-size: 1.1rem; /* Ajuste de tamaño de fuente para móviles */
+        padding: 15px 20px; /* Padding ajustado para móviles */
+    }
+    .valves-image-container {
+        margin-bottom: 0; /* Elimina el espacio debajo de la imagen */
+    }
+
+    .valves-footer-text {
+        margin-top: 0; /* Asegura que el texto esté pegado a la imagen */
+    }
+
+    /* Tarjetas de servicios */
+    .specialized-services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .specialized-card {
+        padding: 20px;
+    }
+    .specialized-icon-container {
+        width: 60px;
+        height: 60px;
+    }
+    .specialized-icon-container i {
+        font-size: 1.8rem;
+    }
+    /* Grid de proceso */
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Galería */
+    .galeria-container {
+        flex-direction: column;
+    }
+    .galeria-imagen {
+        width: 90%; /* Ancho para móviles, deja un pequeño margen */
+        max-width: 400px; /* Para que no sean exageradamente grandes en tabletas */
+        height: auto; /* La altura se ajusta automáticamente manteniendo la proporción */
+        aspect-ratio: 4 / 3; /* Mantiene la misma relación de aspecto en móviles */
+    }
+
+    /* Contenido de contacto */
+    .contact-content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact-info-block, .contact-image-container {
+        max-width: 100%;
+    }
+    .contact-section-new {
+        padding: 40px 10px;
+    }
+    
+    /* Nueva sección de Válvulas */
+    .valves-list-unstyled {
+        margin-bottom: 20px; /* Asegura un pequeño espacio antes de la imagen */
+    }
+
+    .valves-image-container {
+        margin-bottom: 0;
+    }
+
+    .valves-footer-text {
+        margin-top: 0;
+    }
+
+    /* Secciones generales */
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    .intro-text, .contact-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Ajuste para el hero */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero {
+        min-height: 40vh;
+    }
+
+    /* Estilos para las tarjetas de "Por qué elegirnos" */
+    .porque-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .porque-container .image-container, .porque-container .text-content {
+        max-width: 100%;
+    }
+    .porque-container .image-container img {
+        width: 100%;
+    }
+    
+    /* Contenedor principal para evitar desbordamiento */
+    .container {
+        padding: 20px 10px;
+    }
+    
+    /* Ajustes específicos para la sección "Válvulas" */
+    .valves-title {
+        font-size: 1.8rem;
+    }
+    .valves-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .valves-list-unstyled {
+        max-width: 90%;
+        text-align: left;
+    }
+    .valves-image-container {
+        max-width: 90%;
+    }
+}
+/* Modal estilos */
+.modal-bg {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(20,40,80,0.55);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+.modal-bg.active {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 18px;
+    max-width: 90vw;
+    min-width: 280px;
+    max-height: 80vh;
+    padding: 30px 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    position: relative;
+    overflow-y: auto;
+    text-align: center;
+}
+.modal-content h3 {
+    margin-top: 0;
+}
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+}
+.modal-bg h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #004080;
+    font-size: 1.5rem;
+}
+.modal-bg p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
